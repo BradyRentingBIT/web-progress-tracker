@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 
-<!-- We require the header here -->
+<!-- Head -->
 <?php require_once 'includes/head.php' ?>
 
 <body class="bg-lighter">
 <div class="main-content">
 
-    <!-- We require the header here -->
+    <!-- Navbar -->
     <?php require_once 'includes/navbar.php' ?>
 
     <!-- Header -->
@@ -32,12 +32,10 @@
         </div>
     </div>
 </div>
-<!-- Argon Scripts -->
-<!-- Core -->
-<script src="assets/vendor/jquery/dist/jquery.min.js"></script>
-<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Argon JS -->
-<script src="assets/js/argon.js?v=1.0.0"></script>
+
+<!-- Scripts -->
+<?php require_once 'includes/scripts.php' ?>
+
 </body>
 
 </html>

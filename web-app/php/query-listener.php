@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection ALL */
 
     function registerUser() {
         $query = "
@@ -8,10 +8,16 @@
         return $query;
     }
 
+    function checkEmail() {
+        $query = "
+                SELECT user_login FROM user_table WHERE user_login=:user_login
+                ";
+        return $query;
+    }
+
     function authenticateUser() {
         $query = "
-            INSERT INTO user_table (user_login, user_password, user_name)
-            VALUES (:user_login,:user_password,:user_name);
+            SELECT user_password FROM user_table WHERE user_login=:user_login
             ";
         return $query;
     }

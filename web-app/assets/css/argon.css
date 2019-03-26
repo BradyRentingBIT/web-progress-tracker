@@ -5675,7 +5675,7 @@ input[type='button'].btn-block
 
 .navbar-dark .navbar-toggler
 {
-    color: rgba(255, 255, 255, .95);
+    color: rgba(0, 0, 0, .95);
     border-color: transparent;
 }
 

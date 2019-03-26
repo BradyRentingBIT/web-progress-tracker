@@ -2,6 +2,7 @@
 
     require_once 'php/function-listener.php';
     require_once 'php/database.php';
+    require_once 'php/query-listener.php';
 
     echo '
         <form method="post" role="form">
@@ -41,18 +42,32 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $salt = sha1(md5($password));
-        $password = md5($password.$salt);
+        if (empty($username) || empty($email) || empty($password)) {
+            alertMessage("Vul alle velden in.");
+        } else {
 
-        require_once 'php/query-listener.php';
+            $statement = $pdo->prepare(checkEmail());
+            $statement->bindValue(':user_login', $email);
+            $statement->execute();
+            $emailToCheck = $statement->fetch();
+            $emailToCheck = $emailToCheck['user_login'];
 
-        $statement = $pdo->prepare(registerUser());
-        $statement->bindValue(':user_login', $email);
-        $statement->bindValue(':user_password', $password);
-        $statement->bindValue(':user_name', $username);
+            if ($emailToCheck === $email) {
+                alertMessage("Dit email adress bestaat al. Voer een ander email adress in.");
+            } else {
 
-        $statement->execute();
+                $salt = sha1(md5($password));
+                $password = md5($password . $salt);
 
-        refreshPage();
+                $statement = $pdo->prepare(registerUser());
+                $statement->bindValue(':user_login', $email);
+                $statement->bindValue(':user_password', $password);
+                $statement->bindValue(':user_name', $username);
+
+                $statement->execute();
+
+                redirectPage('registration-successful.php');
+            }
+        }
 
     }

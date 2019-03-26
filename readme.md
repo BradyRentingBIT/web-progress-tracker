@@ -1,7 +1,7 @@
 **web progress tracker**
 
 ```sql
-CREATE DATABASE `BIT_MASTER`
+CREATE DATABASE `BIT_MASTER;`
 ```
 
 ```sql

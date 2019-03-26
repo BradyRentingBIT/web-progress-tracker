@@ -5,6 +5,10 @@ CREATE DATABASE `BIT_MASTER`;
 ```
 
 ```sql
+USE `BIT_MASTER`;
+```
+
+```sql
 CREATE TABLE user_table (
     ID int NOT NULL AUTO_INCREMENT,
     user_login varchar(255) NOT NULL,

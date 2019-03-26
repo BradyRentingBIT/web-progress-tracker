@@ -1,4 +1,10 @@
-**web progress tracker**
+**Progress Tracker WebApp**
+
+- Login-system
+- Register-system
+- Safe authentication
+- Track progress
+- Effective and easy-to-use UI
 
 ```sql
 CREATE DATABASE `BIT_MASTER`;

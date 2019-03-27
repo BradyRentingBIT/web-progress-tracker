@@ -12,7 +12,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 27 mrt 2019 om 14:21
+-- Gegenereerd op: 27 mrt 2019 om 14:47
 -- Serverversie: 10.1.37-MariaDB
 -- PHP-versie: 7.3.1
 
@@ -39,6 +39,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `assignment_table` (
   `ID` int(11) NOT NULL,
+  `level` int(11) NOT NULL,
   `assignment_name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -46,17 +47,17 @@ CREATE TABLE `assignment_table` (
 -- Gegevens worden geëxporteerd voor tabel `assignment_table`
 --
 
-INSERT INTO `assignment_table` (`ID`, `assignment_name`) VALUES
-(1, '00 UP AND RUNNING'),
-(2, '00 UP AND RUNNING'),
-(3, '01 LEVEN OVERVIEW'),
-(4, '02 LEVEL AANMAKEN'),
-(5, '03 QUERY PARAMS'),
-(6, '04 OPDRACHTEN AANMAKEN'),
-(7, '05 OPDRACHTEN TONEN'),
-(8, '06 START IT'),
-(9, '07 MAKE IT PRETTY'),
-(10, '08 BOOS FIGHT');
+INSERT INTO `assignment_table` (`ID`, `level`, `assignment_name`) VALUES
+(1, 12, '00 UP AND RUNNING'),
+(2, 12, '00 UP AND RUNNING'),
+(3, 12, '01 LEVEN OVERVIEW'),
+(4, 12, '02 LEVEL AANMAKEN'),
+(5, 12, '03 QUERY PARAMS'),
+(6, 12, '04 OPDRACHTEN AANMAKEN'),
+(7, 12, '05 OPDRACHTEN TONEN'),
+(8, 12, '06 START IT'),
+(9, 12, '07 MAKE IT PRETTY'),
+(10, 12, '08 BOOS FIGHT');
 
 -- --------------------------------------------------------
 
@@ -74,7 +75,13 @@ CREATE TABLE `user_table` (
 
 --
 -- Gegevens worden geëxporteerd voor tabel `user_table`
+--
 
+INSERT INTO `user_table` (`ID`, `user_login`, `user_password`, `user_name`, `current_assignment`) VALUES
+(1, 'younesea28@gmail.com', 'd49a20e0fc16d5d0d714c97511f6aef3', 'Younes el Anjri', NULL),
+(2, 'test@test.com', 'd49a20e0fc16d5d0d714c97511f6aef3', 'Younes el Anjri', NULL);
+
+--
 -- Indexen voor geëxporteerde tabellen
 --
 

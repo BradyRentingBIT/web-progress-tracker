@@ -8,6 +8,11 @@
         return $query;
     }
 
+    function getAssignmentData() {
+        $query = "SELECT * FROM assignment_table";
+        return $query;
+    }
+
     function checkEmail() {
         $query = "
                 SELECT user_login FROM user_table WHERE user_login=:user_login

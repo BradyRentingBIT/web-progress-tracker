@@ -48,6 +48,7 @@ if (isset($_POST["login"]) && isset($_REQUEST["email"]) && isset($_REQUEST["pass
         $_SESSION['ID'] = $dataFetch['ID'];
         $_SESSION['name'] = $dataFetch['user_name'];
         $_SESSION['email'] = $email;
+        $_SESSION['assingment'] = $dataFetch['current_assingment']
         redirectPage("index.php");
     } else {
         $message = "Je hebt verkeerde gegevens ingevoerd. Probeer opnieuw.";

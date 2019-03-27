@@ -19,12 +19,12 @@
             <!-- Navbar items -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="login.php">
+                    <a class="nav-link nav-link-icon" href="login">
                         <span class="nav-link-inner--text text-gray-dark">Inloggen</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="register.php">
+                    <a class="nav-link nav-link-icon" href="register">
                         <span class="nav-link-inner--text text-gray-dark">Register</span>
                     </a>
                 </li>

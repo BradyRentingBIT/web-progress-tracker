@@ -40,11 +40,15 @@ if (isset($_POST["login"]) && isset($_REQUEST["email"]) && isset($_REQUEST["pass
     $statement->bindValue(':user_login', $email);
     $statement->execute();
 
-    $truePassword = $statement->fetch();
-    $truePassword = $truePassword['user_password'];
+    $dataFetch = $statement->fetch();
+    $truePassword = $dataFetch['user_password'];
 
     if ($password === $truePassword) {
-        /* Upon successful login */
+        echo "Je bent ingelogd";
+        $_SESSION['ID'] = $dataFetch['ID'];
+        $_SESSION['name'] = $dataFetch['user_name'];
+        $_SESSION['email'] = $email;
+        redirectPage("index.php");
     } else {
         $message = "Je hebt verkeerde gegevens ingevoerd. Probeer opnieuw.";
         echo "<script type='text/javascript'>alert('$message');</script>";

@@ -17,7 +17,14 @@
 
     function authenticateUser() {
         $query = "
-            SELECT user_password FROM user_table WHERE user_login=:user_login
+            SELECT ID, user_login, user_password, user_name FROM user_table WHERE user_login=:user_login
+            ";
+        return $query;
+    }
+
+    function getName() {
+        $query = "
+            SELECT user_password, ID FROM user_table WHERE user_login=:user_login
             ";
         return $query;
     }

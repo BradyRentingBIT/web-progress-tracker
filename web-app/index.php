@@ -1,3 +1,5 @@
+<?php
+session_start();?>
 <!DOCTYPE html>
 <html>
 
@@ -53,7 +55,7 @@
           </a>
           <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
             <div class=" dropdown-header noti-title">
-              <h6 class="text-overflow m-0">Welcome!</h6>
+              <h6 class="text-overflow m-0">Welcome! <?php echo $_SESSION["name"]; ?></h6>
             </div>
             <a href="./examples/profile.html" class="dropdown-item">
               <i class="ni ni-single-02"></i>
@@ -72,7 +74,7 @@
               <span>Support</span>
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#!" class="dropdown-item">
+            <a href="logout.php" class="dropdown-item">
               <i class="ni ni-user-run"></i>
               <span>Logout</span>
             </a>
@@ -111,37 +113,12 @@
         <!-- Navigation -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="./index.html">
-              <i class="ni ni-tv-2 text-primary"></i> Dashboard
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./examples/icons.html">
-              <i class="ni ni-planet text-blue"></i> Icons
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./examples/maps.html">
-              <i class="ni ni-pin-3 text-orange"></i> Maps
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./examples/profile.html">
-              <i class="ni ni-single-02 text-yellow"></i> User profile
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./examples/tables.html">
-              <i class="ni ni-bullet-list-67 text-red"></i> Tables
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./examples/login.html">
+            <a class="nav-link" href="login.php">
               <i class="ni ni-key-25 text-info"></i> Login
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./examples/register.html">
+            <a class="nav-link" href="register.php">
               <i class="ni ni-circle-08 text-pink"></i> Register
             </a>
           </li>
@@ -223,7 +200,7 @@
                 <span>Support</span>
               </a>
               <div class="dropdown-divider"></div>
-              <a href="#!" class="dropdown-item">
+              <a href="logout.php" class="dropdown-item">
                 <i class="ni ni-user-run"></i>
                 <span>Logout</span>
               </a>

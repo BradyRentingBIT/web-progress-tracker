@@ -48,12 +48,8 @@ if (isset($_POST["login"]) && isset($_REQUEST["email"]) && isset($_REQUEST["pass
         $_SESSION['ID'] = $dataFetch['ID'];
         $_SESSION['name'] = $dataFetch['user_name'];
         $_SESSION['email'] = $email;
-<<<<<<< HEAD
-        redirectPage("dashboard.php");
-=======
         $_SESSION['assingment'] = $dataFetch['current_assingment']
         redirectPage("index.php");
->>>>>>> 4e211a08649a306cdb5521ae968ec2f54a154c4a
     } else {
         $message = "Je hebt verkeerde gegevens ingevoerd. Probeer opnieuw.";
         echo "<script type='text/javascript'>alert('$message');</script>";

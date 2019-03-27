@@ -22,7 +22,7 @@
 
     function authenticateUser() {
         $query = "
-            SELECT ID, user_login, user_password, user_name FROM user_table WHERE user_login=:user_login
+            SELECT ID, user_login, user_password, user_name, current_assingment FROM user_table WHERE user_login=:user_login
             ";
         return $query;
     }

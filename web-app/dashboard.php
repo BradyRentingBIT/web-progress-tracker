@@ -17,7 +17,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a class="navbar-brand pt-10" href="index.php">
+        <a class="navbar-brand pt-10" href="index">
             <h3>Assignment Tracker</h3>
         </a>
         <!-- User -->
@@ -75,7 +75,7 @@
             <div class="navbar-collapse-header d-md-none">
                 <div class="row">
                     <div class="col-6 collapse-brand">
-                        <a href="index.php">
+                        <a href="index">
                             <img src="./assets/img/brand/blue.png">
                         </a>
                     </div>
@@ -101,7 +101,7 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php">
+                    <a class="nav-link" href="index">
                         <i class="fas fa-tasks"></i> Opdrachten
                     </a>
                 </li>
@@ -115,7 +115,11 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
+<<<<<<< HEAD
             <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="index.php"></a>
+=======
+            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="index">Dashboard</a>
+>>>>>>> 4e211a08649a306cdb5521ae968ec2f54a154c4a
             <!-- User -->
             <ul class="navbar-nav align-items-center d-none d-md-flex">
                 <li class="nav-item dropdown">

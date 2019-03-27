@@ -23,3 +23,7 @@ CREATE TABLE user_table (
     PRIMARY KEY (ID)
 );
 ```
+
+```sql
+ALTER TABLE `user_table` ADD FOREIGN KEY (`current_assignment`) REFERENCES `assignment_table`(`ID`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+```

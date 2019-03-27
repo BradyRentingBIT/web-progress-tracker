@@ -23,7 +23,19 @@ CREATE TABLE user_table (
     PRIMARY KEY (ID)
 );
 ```
+```sql
+ALTER TABLE `bit_master`.`user_table` 
+ADD COLUMN `current_assignment1` INT NULL AFTER `current_assignment`;
 
+``` 
+
+```sql
+CREATE TABLE assignment_table (
+    ID int NOT NULL AUTO_INCREMENT,
+    assignment_name varchar(255) NOT NULL,
+    PRIMARY KEY (ID)
+);
+```
 ```sql
 ALTER TABLE `user_table` ADD FOREIGN KEY (`current_assignment`) REFERENCES `assignment_table`(`ID`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 ```

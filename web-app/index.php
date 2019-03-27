@@ -175,7 +175,7 @@ session_start();?>
                   <img alt="Image placeholder" src="./assets/img/theme/team-4-800x800.jpg">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+                  <span class="mb-0 text-sm  font-weight-bold"><?php if(isset($_SESSION["name"])){echo $_SESSION["name"];}?></span>
                 </div>
               </div>
             </a>

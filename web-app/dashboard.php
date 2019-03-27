@@ -115,11 +115,9 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
-<<<<<<< HEAD
             <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="index.php"></a>
-=======
             <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="index">Dashboard</a>
->>>>>>> 4e211a08649a306cdb5521ae968ec2f54a154c4a
+
             <!-- User -->
             <ul class="navbar-nav align-items-center d-none d-md-flex">
                 <li class="nav-item dropdown">
